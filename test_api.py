@@ -1,7 +1,8 @@
 import requests
 
 # Endpoint URL
-url = 'http://localhost:8080/predict'  # Update the URL if necessary
+local_url = 'http://localhost:5000/predict'  # Update the URL if necessary
+heroku_url = "https://dementia-prediction-a1a3078b20c1.herokuapp.com/predict"
 
 # Image file path
 image_file = 'images/28.jpg'  # Replace with the path to your image file
@@ -12,7 +13,7 @@ with open(image_file, 'rb') as f:
     files = {'image': f}
 
     # Send the POST request to the API
-    response = requests.post(url, files=files)
+    response = requests.post(heroku_url, files=files)
 
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
