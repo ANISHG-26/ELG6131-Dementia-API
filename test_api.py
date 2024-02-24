@@ -5,7 +5,7 @@ local_url = 'http://localhost:5000/predict'  # Update the URL if necessary
 heroku_url = "https://dementia-prediction-a1a3078b20c1.herokuapp.com/predict"
 
 # Image file path
-image_file = 'images/28.jpg'  # Replace with the path to your image file
+image_file = 'images/26.jpg'  # Replace with the path to your image file
 
 # Open the image file
 with open(image_file, 'rb') as f:
