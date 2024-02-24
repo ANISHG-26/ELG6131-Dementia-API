@@ -20,17 +20,13 @@ def predict():
     # Get the image data from the request
     image_data = request.files['image']
     
-    # Preprocess the image data (you may need to adjust this based on your model preprocessing)
-    # Example: resizing, normalizing pixel values, etc.
-    # Assuming here that your model expects images of size (width, height, channels)
+    # Preprocess the image data
     processed_image = preprocess_image(image_data)
 
     # Make prediction
     prediction = model.predict(processed_image)
     
-    # Convert prediction to human-readable format (if necessary)
-    # Example: converting numerical output to class labels
-    # You need to adapt this based on your model's output format
+    # Convert prediction to human-readable format
     predicted_class = decode_predictions(prediction)
     
     # Prepare the response
@@ -56,10 +52,6 @@ def preprocess_image(image_data):
 
 # Helper function to decode model predictions
 def decode_predictions(prediction):
-    # Example: converting numerical output to class labels
-    # You need to adapt this based on your model's output format
-    # Assuming here that prediction is a list of probabilities for each class
-    # You may need to load your class labels if applicable
     labels = ['MildDemented', 'ModerateDemented', 'NonDemented', 'VeryMildDemented']  # Example class labels
     predicted_class_index = np.argmax(prediction)
     predicted_class = labels[predicted_class_index]

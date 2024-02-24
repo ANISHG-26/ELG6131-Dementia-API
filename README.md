@@ -43,3 +43,7 @@ This Flask API has been created to serve an endpoint to requests that would pred
 ### Scale to Lose Money
 
 `heroku ps:scale web=1 -a dementia-prediction`
+
+### Logs
+
+`heroku logs --tail -a dementia-prediction`
