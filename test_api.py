@@ -2,7 +2,7 @@ import requests
 
 # Endpoint URL
 local_url = 'http://localhost:5000/predict'  # Update the URL if necessary
-heroku_url = "https://dementia-prediction-a1a3078b20c1.herokuapp.com/predict"
+heroku_url = "https://dementia-prediction-a1a3078b20c1.herokuapp.com/upload"
 
 # Image file path
 image_file = 'images/26.jpg'  # Replace with the path to your image file
@@ -19,6 +19,7 @@ with open(image_file, 'rb') as f:
     if response.status_code == 200:
         # Get the prediction from the response
         prediction = response.json()['prediction']
+        print(response.json())
         print('Prediction:', prediction)
     else:
         print('Error:', response.text)

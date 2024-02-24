@@ -5,7 +5,6 @@ import numpy as np
 from PIL import Image
 import os
 
-print("The following port is assigned: ", os.environ.get('PORT'))
 
 IMAGE_SIZE = [208,176] 
 # Initialize Flask application
@@ -15,7 +14,7 @@ app = Flask(__name__)
 model = load_model('model.h5')
 
 # Define the prediction endpoint
-@app.route('/predict', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def predict():
     # Get the image data from the request
     image_data = request.files['image']
@@ -31,7 +30,7 @@ def predict():
     
     # Prepare the response
     response = {
-        'prediction': predicted_class
+        'dementia': predicted_class
     }
     
     # Return the response as JSON
