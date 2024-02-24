@@ -24,11 +24,11 @@ This Flask API has been created to serve an endpoint to requests that would pred
 
 `heroku container:login`
 
-### Push image to Heroku Container Registry
+### Push Image to Heroku Container Registry
 
 `docker push registry.heroku.com/dementia-prediction/web`
 
-### Push image for Heroku App
+### Push Image for Heroku App
 
 `heroku container:push web -a dementia-prediction`
 
@@ -36,10 +36,10 @@ This Flask API has been created to serve an endpoint to requests that would pred
 
 `heroku container:release web -a dementia-prediction`
 
-### Scale to save money
+### Scale to Save Money
 
 `heroku ps:scale web=0 -a dementia-prediction`
 
-### Scale to lose money
+### Scale to Lose Money
 
 `heroku ps:scale web=1 -a dementia-prediction`
