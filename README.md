@@ -6,27 +6,32 @@ This Flask API has been created to serve an endpoint to requests that would pred
 
 ## Docker Commands
 
-Build container image for Heroku: `docker build -t registry.heroku.com/dementia-prediction/web .`
-Local container run: `docker run -p 5000:5000 --name Dementia-Prediction registry.heroku.com/dementia-prediction/web`
+### Build container image for Heroku
+
+`docker build -t registry.heroku.com/dementia-prediction/web .`
+
+### Local container run
+
+`docker run -p 5000:5000 --name Dementia-Prediction registry.heroku.com/dementia-prediction/web`
 
 ## Heroku Commands
 
-# Heroku Login
+### Heroku Login
 
 `heroku login`
 
-# Heroku Container Registry Login
+### Heroku Container Registry Login
 
 `heroku container:login`
 
-# Push image to Heroku Container Registry
+### Push image to Heroku Container Registry
 
 `docker push registry.heroku.com/dementia-prediction/web`
 
-# Push image for Heroku App
+### Push image for Heroku App
 
 `heroku container:push web`
 
-# Release Application
+### Release Application
 
 `heroku container:release web`
