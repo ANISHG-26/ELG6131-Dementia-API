@@ -18,7 +18,7 @@ with open(image_file, 'rb') as f:
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
         # Get the prediction from the response
-        prediction = response.json()['prediction']
+        prediction = response.json()['dementia']
         print(response.json())
         print('Prediction:', prediction)
     else:
