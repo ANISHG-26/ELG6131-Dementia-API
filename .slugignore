@@ -2,3 +2,4 @@ Dockerfile
 README.md
 test_api.py
 .gitignore
+.dockerignore
