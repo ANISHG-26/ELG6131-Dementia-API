@@ -30,8 +30,16 @@ This Flask API has been created to serve an endpoint to requests that would pred
 
 ### Push image for Heroku App
 
-`heroku container:push web`
+`heroku container:push web -a dementia-prediction`
 
 ### Release Application
 
-`heroku container:release web`
+`heroku container:release web -a dementia-prediction`
+
+### Scale to save money
+
+`heroku ps:scale web=0 -a dementia-prediction`
+
+### Scale to lose money
+
+`heroku ps:scale web=1 -a dementia-prediction`
