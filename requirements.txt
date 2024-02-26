@@ -5,3 +5,4 @@ numpy
 tensorflow-cpu
 pillow
 gunicorn
+flask_cors

@@ -4,11 +4,12 @@ from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
 import os
-
+from flask_cors import CORS
 
 IMAGE_SIZE = [208,176] 
 # Initialize Flask application
 app = Flask(__name__)
+CORS(app)
 
 # Load the saved TensorFlow CNN model
 model = load_model('model.h5')
